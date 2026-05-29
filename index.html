@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Museo Inteligente IA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- TensorFlow -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
+    <!-- Teachable Machine -->
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Museo Inteligente IA</h1>
+
+        <p>
+            Explora obras artísticas mediante inteligencia artificial.
+            El sistema clasificará automáticamente si la obra mostrada
+            corresponde a una pintura o una escultura.
+        </p>
+
+        <!-- BOTONES -->
+        <div class="buttons">
+
+            <button id="start-btn" onclick="initCamera()">
+                Iniciar cámara
+            </button>
+
+            <button onclick="stopCamera()">
+                Apagar cámara
+            </button>
+
+        </div>
+
+        <h3>O subir una imagen</h3>
+
+        <!-- INPUT IMAGEN -->
+        <input type="file" id="image-upload" accept="image/*">
+
+        <br><br>
+
+        <!-- IMAGEN SUBIDA -->
+        <img id="uploaded-image" width="300">
+
+        <br><br>
+
+        <!-- WEBCAM -->
+        <div id="webcam-container"></div>
+
+        <br>
+
+        <!-- RESULTADOS -->
+        <div id="label-container"></div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
